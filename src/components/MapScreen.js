@@ -1,7 +1,6 @@
-import { Map } from "leaflet";
 import React, { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import L from "leaflet";
 import axios from "../axios";
 import icon from "leaflet/dist/images/marker-icon.png";
@@ -20,9 +19,7 @@ function MapScreen() {
   const [previous, setPrevious] = useState({});
   const [weatherData, setWeatherData] = useState([]);
 
-  const [center, setCenter] = useState([42.5, 1.5]);
-  const [zoom, setZoom] = useState(13);
-  const position = [51.505, -0.09];
+  const center = [42.5, 1.5]
   //use effect for getting intial data 
   useEffect(() => {
     (async () => {
